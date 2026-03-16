@@ -1,0 +1,227 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  overflow: hidden;
+  font-family: 'Courier New', monospace;
+  color: #fff;
+}
+
+/* The Three.js canvas fills the whole screen */
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* All UI sits on top of the canvas */
+#ui {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* so clicks pass through to canvas */
+}
+
+/* Intro text in top-left */
+#intro {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+
+#intro h1 {
+  font-size: 2.5rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 20px #88ccff;
+}
+
+#intro p {
+  font-size: 0.9rem;
+  color: #aaddff;
+  letter-spacing: 3px;
+  margin-top: 8px;
+}
+
+/* Info panel */
+#panel {
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  transform: translateY(-50%);
+  width: 380px;
+  background: linear-gradient(135deg, rgba(5,10,30,0.95), rgba(10,25,60,0.95));
+  border: 1px solid rgba(100, 180, 255, 0.25);
+  border-radius: 20px;
+  padding: 36px;
+  pointer-events: all;
+  box-shadow:
+    0 0 60px rgba(50, 120, 255, 0.15),
+    0 0 120px rgba(50, 120, 255, 0.05),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  backdrop-filter: blur(20px);
+}
+
+#panel.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) translateX(40px);
+}
+
+#close-panel {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #aaa;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+#close-panel:hover {
+  background: rgba(255,80,80,0.2);
+  color: #fff;
+  border-color: rgba(255,80,80,0.4);
+}
+
+#panel-content h2 {
+  font-size: 0.75rem;
+  letter-spacing: 5px;
+  color: #88ccff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(100,180,255,0.15);
+  padding-bottom: 14px;
+}
+
+#panel-content p {
+  font-size: 0.85rem;
+  color: #b0d0f0;
+  line-height: 1.9;
+  margin-bottom: 10px;
+}
+
+#panel-content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#panel-content ul li {
+  font-size: 0.85rem;
+  color: #b0d0f0;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  background: rgba(100,180,255,0.05);
+  border-radius: 8px;
+  border-left: 2px solid rgba(100,180,255,0.3);
+  line-height: 1.6;
+}
+
+#panel-content a {
+  color: #66aaff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(100,180,255,0.3);
+  padding-bottom: 1px;
+  transition: color 0.2s;
+}
+
+#panel-content a:hover { color: #aaddff; }
+
+/* Planet name tag above panel */
+#panel-tag {
+  position: absolute;
+  top: -14px;
+  left: 30px;
+  background: linear-gradient(90deg, #1144aa, #2266cc);
+  color: #fff;
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* Tooltip on hover */
+#tooltip {
+  position: absolute;
+  background: rgba(0, 20, 60, 0.85);
+  border: 1px solid rgba(100, 180, 255, 0.4);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #aaddff;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+#tooltip.hidden { opacity: 0; }
+
+/* Resume button */
+#resume-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  padding: 10px 22px;
+  border: 1px solid rgba(100, 180, 255, 0.5);
+  border-radius: 30px;
+  color: #aaddff;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  pointer-events: all;
+  transition: all 0.3s;
+  background: rgba(10, 30, 80, 0.5);
+}
+
+#resume-btn:hover {
+  background: rgba(50, 120, 255, 0.3);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(50, 120, 255, 0.4);
+}
+
+#music-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 10px 20px;
+  border: 1px solid rgba(100,180,255,0.3);
+  border-radius: 30px;
+  color: #aaddff;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  background: rgba(10,30,80,0.6);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+  z-index: 20;
+}
+
+#music-btn:hover {
+  background: rgba(50,100,200,0.3);
+  box-shadow: 0 0 20px rgba(50,120,255,0.3);
+}

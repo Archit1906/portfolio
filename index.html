@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Space Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- The 3D canvas goes here (Three.js injects it) -->
+  <canvas id="bg"></canvas>
+
+  <!-- Overlay UI -->
+  <div id="ui">
+    <div id="intro">
+      <h1>YOUR NAME</h1>
+      <p>Backend Developer · AI Engineer · Space Explorer</p>
+    </div>
+
+    <!-- Info panel that opens when planet is clicked -->
+    <div id="panel" class="hidden">
+      <div id="panel-tag">PLANET INFO</div>
+      <button id="close-panel">✕</button>
+      <div id="panel-content"></div>
+    </div>
+
+    <!-- Planet labels that appear on hover -->
+    <div id="tooltip" class="hidden"></div>
+
+    <!-- Resume button -->
+<a id="resume-btn" href="resume.pdf" download="MyResume.pdf">⬇ Download Resume</a>  </div>
+
+  <!-- Load Three.js from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- OrbitControls for mouse drag/zoom -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <!-- Your main script -->
+  <script src="script.js"></script>
+
+  <!-- Music toggle button -->
+  <div id="music-btn" onclick="toggleMusic()">🔇 Music</div>
+</body>
+</html>
