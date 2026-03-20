@@ -146,12 +146,13 @@ const planetData = [
     speed: 0.8,
     content: `
       <h2>About Me</h2>
-      <p>Hi! I'm <strong>Your Name</strong>, a Backend Developer & AI enthusiast.</p>
+      <p>Hi, I'm <strong>Archit Garg</strong> — an aspiring engineer passionate about building things that matter.</p>
       <ul>
-        <li>🎓 B.Tech Computer Science</li>
-        <li>🌍 Based in India</li>
-        <li>💡 Passionate about AI, ML & Web</li>
-        <li>🚀 Building things that matter</li>
+        <li>🎓 B.Tech CSE · SRM Institute of Science & Technology, Chennai</li>
+        <li>📅 3rd Semester · Expected Graduation: May 2028</li>
+        <li>⭐ Current CGPA: 9/10</li>
+        <li>🔭 Committee Head of Design · Astrophilia SRM</li>
+        <li>💡 Interested in Web Dev, AI/ML & Frontend Design</li>
       </ul>
     `
   },
@@ -165,11 +166,18 @@ const planetData = [
     content: `
       <h2>Skills</h2>
       <ul>
-        <li>⚡ C++ / Python / JavaScript</li>
-        <li>🌐 React · Node.js · Express</li>
-        <li>🤖 Machine Learning · TensorFlow</li>
-        <li>🛢️ MongoDB · MySQL</li>
-        <li>☁️ Git · Linux · Docker</li>
+        <li>💻 C · C++ · Java · JavaScript</li>
+        <li>🌐 HTML · CSS · Frontend Design</li>
+        <li>🧠 OOPs · Data Structures & Algorithms</li>
+        <li>🛢️ MySQL (Basics)</li>
+        <li>🤖 Basic AI / ML Concepts</li>
+      </ul>
+      <h2 style="margin-top:16px">Certifications</h2>
+      <ul>
+        <li>📜 Web Development Bootcamp – Udemy</li>
+        <li>📜 OOP Fundamentals – NPTEL</li>
+        <li>📜 DSA – NPTEL</li>
+        <li>📜 AI & Cloud Internship – IBM</li>
       </ul>
     `
   },
@@ -182,16 +190,20 @@ const planetData = [
     speed: 0.45,
     content: `
       <h2>Projects</h2>
-      <p><strong>🌾 AI Crop Recommendation System</strong><br/>
-      Python · ML · Flask<br/>
-      <a href="#">GitHub →</a></p>
+      <p><strong>🗓️ College Event & Certificate System</strong></p>
+      <ul>
+        <li>Database system using MySQL</li>
+        <li>Manages student participation & certificates</li>
+        <li>ER diagrams & relational schema design</li>
+      </ul>
       <br/>
-      <p><strong>🥽 VR Themed Website</strong><br/>
-      HTML · CSS · Three.js<br/>
-      <a href="#">GitHub →</a></p>
+      <p><strong>🌐 Portfolio Website</strong></p>
+      <ul>
+        <li>Responsive site using HTML, CSS & JavaScript</li>
+        <li>Sections for skills, projects & contact</li>
+      </ul>
       <br/>
-      <p><strong>🤖 More projects...</strong><br/>
-      <a href="https://github.com/yourusername">View all on GitHub →</a></p>
+      <a href="https://github.com/Archit1906" target="_blank">🐙 View all on GitHub →</a>
     `
   },
   {
@@ -203,12 +215,19 @@ const planetData = [
     speed: 0.35,
     content: `
       <h2>Experience</h2>
-      <p><strong>🏢 Intern – Company Name</strong><br/>
-      Jun 2024 – Aug 2024</p>
+      <p><strong>🏢 Webanix – Web Development Intern</strong><br/>
+      Duration: 1 Month</p>
       <ul>
-        <li>Built REST APIs with Node.js</li>
-        <li>Worked on ML pipeline deployment</li>
-        <li>Collaborated in Agile team</li>
+        <li>Frontend development using HTML & CSS</li>
+        <li>Worked on real-world layouts & UI improvements</li>
+        <li>Gained exposure to teamwork & project workflows</li>
+      </ul>
+      <br/>
+      <p><strong>🔭 Astrophilia SRM</strong></p>
+      <ul>
+        <li>Committee Head of Design Team</li>
+        <li>Participated in technical & astronomy events</li>
+        <li>Contributed to event planning & coordination</li>
       </ul>
     `
   },
@@ -222,12 +241,14 @@ const planetData = [
     hasSaturnRings: true,
     content: `
       <h2>Contact</h2>
-      <p>Let's connect and build something amazing.</p>
+      <p>Let's connect and build something amazing together.</p>
       <br/>
-      <p>📧 <a href="mailto:you@email.com">you@email.com</a></p>
-      <p>💼 <a href="#">LinkedIn</a></p>
-      <p>🐙 <a href="#">GitHub</a></p>
-      <p>🐦 <a href="#">Twitter</a></p>
+      <ul>
+        <li>📧 <a href="mailto:architgargdabs@gmail.com">architgargdabs@gmail.com</a></li>
+        <li>📱 +91-9672963320</li>
+        <li>💼 <a href="https://www.linkedin.com/in/archit-garg-8a4715328/" target="_blank">LinkedIn →</a></li>
+        <li>🐙 <a href="https://github.com/Archit1906" target="_blank">GitHub →</a></li>
+      </ul>
     `
   }
 ];
